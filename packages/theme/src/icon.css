@@ -9,7 +9,7 @@
 
 [class^="lu-icon-"], [class*=" lu-icon-"]  {
   font-family:"iconfont" !important;
-  font-size:18px;
+  font-size:14px;
   font-style:normal;
   vertical-align: baseline;
   display: inline-block;
@@ -125,3 +125,25 @@
 
 .lu-icon-close2:before { content: "\e6dd"; }
 
+.lu_button .loading{
+    font-family:"iconfont" !important;
+  font-size:14px;
+  font-style:normal;
+  vertical-align: baseline;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    animation: spin .8s linear infinite;
+
+}
+.lu_button .loading:before {
+    content: "\e66a";
+}
+@keyframes spin {
+	from {
+		-webkit-transform: rotate(0);
+	}
+	to {
+		-webkit-transform: rotate(-360deg);
+	}
+}

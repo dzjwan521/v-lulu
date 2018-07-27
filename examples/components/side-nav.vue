@@ -12,7 +12,7 @@
     .side-nav-title{
       padding: 0 24px 8px;
       color: #8DABC4;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: bold;
       letter-spacing: 1px;
       text-transform: uppercase;

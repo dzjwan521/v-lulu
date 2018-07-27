@@ -4,26 +4,12 @@
 ----
 
 
-## vue项目搭建
+## 使用前提
 
-> `Vue.js` 提供一个官方命令行工具 `vue-cli`，可用于快速搭建大型单页应用。该工具提供开箱即用的构建工具配置，带来现代化的前端开发流程。只需几分钟即可创建并启动一个带热重载、保存时静态检查以及可用于生产环境的构建配置的项目。
-```bash
-> npm i -g vue-cli  //vue项目搭建工具
-> vue init webpack 项目名
-> cd 项目名
-> npm i
-> npm run dev //开始开发
-```
-想看更详细的教程，[可以参考我的教程](https://luvxy.cn/#/article/5b587fd6f049b70ef43feac8)
+> 使用lulu前提是学会vue，`Vue.js` 提供一个官方命令行工具 `vue-cli`，可用于快速搭建大型单页应用。该工具提供开箱即用的构建工具配置，带来现代化的前端开发流程。只需几分钟即可创建并启动一个带热重载、保存时静态检查以及可用于生产环境的构建配置的项目。
+如果你不会vue，[可以参考我的教程](https://luvxy.cn/#/article/5b587fd6f049b70ef43feac8)
 
 
-## vue官方资料
-
-> 在使用之前，推荐学习 `Vue` 和 `ES2015` ，并正确配置 `Node.js` v6.x 或以上版本
-
-`vue-lulu` 基于 `Vue.js` 2.x+ 版本开发，所以有必要了解以下基础知识：
-- [Vue 组件](https://cn.vuejs.org/v2/guide/components.html)
-- [单文件组件](https://cn.vuejs.org/v2/guide/single-file-components.html)
 
 
 ## 使用 npm 安装 lulu

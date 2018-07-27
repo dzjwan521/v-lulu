@@ -9,7 +9,8 @@
     'lu_button_size-'+size
     ]"
   >
-    <i v-if="icon !== ''" :class="icon"></i>
+
+    <i v-if="(icon !== '')||loading" :class="[icon,{'loading':loading}]"></i>
     <slot></slot>
   </button>
 </template>
@@ -20,6 +21,10 @@
       type: {
         type: String,
         default: 'default'
+      },
+      loading:{
+        type: Boolean,
+        default: false
       },
       size: {
         type: String,
