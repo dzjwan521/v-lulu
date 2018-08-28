@@ -33,7 +33,7 @@ inquirer.prompt([{
   cd .. &&
   git add . &&
   git commit -m '${answers.message}' &&
-  git push &&
+  git push origin gh-pages&&
   git checkout master`;
     console.log(cmd)
 
