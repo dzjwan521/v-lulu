@@ -33,13 +33,10 @@ inquirer.prompt([{
   cd .. &&
   git add . &&
   git commit -m '${answers.message}' &&
-  git push`;
+  git push origin gh-pages`;
 
     console.log(cmd)
-    console.log();
-
     exec(cmd);
-
     console.log();
     console.log(chalk.green(`   发布成功  `));
     console.log();
