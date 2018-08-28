@@ -24,7 +24,7 @@ inquirer.prompt([{
 }]).then(function (answers) {
     let build = answers.conform ? 'npm run build &&' : '';
     var cmd = `${build}
-  git checkout master &&
+  git checkout gh-pages &&
   rm -rf index.html &&
   rm -rf static &&
   cd dist &&
@@ -33,12 +33,13 @@ inquirer.prompt([{
   cd .. &&
   git add . &&
   git commit -m '${answers.message}' &&
-  git push`;
+  git push &&
+  git checkout master`;
     console.log(cmd)
 
     exec(cmd);
 
     console.log();
-    console.log(chalk.green(`   发布成功 ) `));
+    console.log(chalk.green(`   发布成功  `));
     console.log();
 })
