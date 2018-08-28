@@ -1,16 +1,18 @@
 {
   "name": "vue-lulu",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A Vue.js project",
   "author": "414603173@qq.com",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "publish": "node build/publish.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "inquirer": "^6.2.0",
     "markdown-it-container": "^2.0.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"

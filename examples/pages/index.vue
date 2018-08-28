@@ -1,13 +1,12 @@
 <template>
   <div  class="pg-index">
     <div class="index-container">
-      <img src="../assets/img/logo.png">
-      <p>一款轻量级、模块化的前端 UI 组件库</p>
+      <!-- <img src="../assets/img/logo.png"> -->
+      <p>一款抄袭的前端 UI 组件库</p>
     </div>
     <div class="separate-panel">
       <div class="about">
         <router-link :to="{name: 'giud'}">开始使用</router-link>
-        <a target="_blank" class="btn-github" href="">GitHub</a>
       </div>
     </div>
   </div>
@@ -46,25 +45,52 @@
         background: #fff;
         text-align: center;
         a {
-          color: #fff;
-          background-image: linear-gradient(90deg, #00AEFF 0%, #3369E7 100%);
-          box-shadow: 0 2px 6px 0 rgba(51,105,231,0.4);
-          display: inline-block;
-          width: 190px;
-          height: 56px;
-          margin: 0 35px;
-          font-size: 18px;
-          line-height: 56px;
-          border-radius: 28px;
-          transition: all .3s;
-          cursor: pointer;
+				background: linear-gradient(to right, #00AEFF, #3369E7);
+                color: white;
+                 display: inline-block;
+                 margin: 0 35px;
+				--width: 250px;
+				--height: calc(var(--width) / 3);
+				width: var(--width);
+				height: var(--height);
+				text-align: center;
+				line-height: var(--height);
+				font-size: calc(var(--height) / 2.5);
+				font-family: sans-serif;
+				letter-spacing: 0.2em;
+				border: 1px solid #3369E7;
+                border-radius: 2em;
+                transform: perspective(500px) rotateY(-15deg);
+				text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.3);
+                box-shadow: 1px 0 0 3px rgba(0, 0, 0, 0.1);
+                position: relative;
+                 transition: 0.5s;
+                 overflow: hidden;
+
+			}
+
+		a:hover {
+			transform: perspective(500px) rotateY(15deg);
+			text-shadow: -6px 3px 2px rgba(0, 0, 0, 0.3);
+			box-shadow: -1px 0 0 3px rgba(0, 0, 0, 0.1);
+		}
+
+        a::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, white, transparent);
+            left: 0;
+             left: -100%;
+            transition: 0.5s;
         }
-        .btn-github{
-          color: #316DE9;
-          border: 1px solid #2F6EE9;
-          background: #fff;
-          box-shadow: none;
+
+
+        a:hover::before {
+            left: 100%;
         }
+
       }
     }
     .separate-panel:after{

@@ -5,12 +5,6 @@ const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 const MarkdownItContainer = require('markdown-it-container')
 const striptags = require('./strip-tags')
-const vueMarkdown = {
-    preprocess: (MarkdownIt, source) => {
-        MarkdownIt.renderer.rules.table_open = function () {
-            return '<table class="table">'
-        }
-        MarkdownIt.renderer.rules.fence = utils.wrapCustomClass(MarkdownIt.renderer.rules.fence)
 
         // ```html `` 给这种样式加个class hljs
         //  但是markdown-it 有个bug fence整合attr的时候直接加载class数组上而不是class的值上
@@ -24,6 +18,12 @@ const vueMarkdown = {
         // }
 
         // ```code`` 给这种样式加个class code_inline
+const vueMarkdown = {
+    preprocess: (MarkdownIt, source) => {
+        MarkdownIt.renderer.rules.table_open = function () {
+            return '<table class="table">'
+        }
+        MarkdownIt.renderer.rules.fence = utils.wrapCustomClass(MarkdownIt.renderer.rules.fence)
         const code_inline = MarkdownIt.renderer.rules.code_inline
         MarkdownIt.renderer.rules.code_inline = function (...args) {
             args[0][args[1]].attrJoin('class', 'code_inline')

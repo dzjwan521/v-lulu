@@ -24,7 +24,7 @@ inquirer.prompt([{
 }]).then(function (answers) {
     let build = answers.conform ? 'npm run build &&' : '';
     var cmd = `${build}
-  git checkout gh-pages &&
+  git checkout master &&
   rm -rf index.html &&
   rm -rf static &&
   cd dist &&

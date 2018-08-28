@@ -61,6 +61,7 @@
       box-sizing: border-box;
     }
   }
+    svg { fill: #4c5161; }
 
   .container:after {
     content: "";

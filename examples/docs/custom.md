@@ -39,13 +39,13 @@
 }
 </style>
 ## 颜色
-内置这些颜色可以直接使用，使用方法：
+内置这些颜色16进制色值和变量可以直接使用，使用方法：
 ```css
-css变量使用
-.dark{
-    color:var(--dark);//两者相等
-    color:#4c5161;
-}
+css常用方式
+color:#4c5161;
+
+css变量方式
+color:var(--dark);
 ```
 <div class="demo-block">
  <div class="color_list">
