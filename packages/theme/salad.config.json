@@ -3,9 +3,10 @@
   "features": {
     "bem": {
       "shortcuts": {
+        "component-namespace":"n",
         "component": "b",
-        "modifier": "m",
-        "descendent": "e"
+        "descendent": "e",
+        "modifier": "m"
       },
       "separators": {
         "descendent": "_",

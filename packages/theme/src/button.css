@@ -1,23 +1,22 @@
 @import "common/var.css";
-
-@b lu {
-  @e button {
-    display: inline-block;
-    line-height: 1;
-    white-space: nowrap;
-    cursor: pointer;
-    -webkit-appearance: none;
-    text-align: center;
-    box-sizing: border-box;
-    outline: none;
-    margin: 0;
-    padding: 12px 20px;
-	overflow: visible;
-    font-size: 14px;
-	border-radius: var(--borderRadius);
-	background-repeat: no-repeat;
-	background-position: center;
-	transition: var(--border-transition);
+@n lu{
+    @b button {
+        display: inline-block;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        -webkit-appearance: none;
+        text-align: center;
+        box-sizing: border-box;
+        outline: none;
+        margin: 0;
+        padding: 12px 20px;
+        overflow: visible;
+        font-size: 14px;
+        border-radius: var(--borderRadius);
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: var(--border-transition);
 
     @m size-medium {
       padding: 10px 20px;

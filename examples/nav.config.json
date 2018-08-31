@@ -1,53 +1,54 @@
 {
-  "开发指南": [
-    {
-      "name": "giud",
-      "path": "/giud",
-      "desc": "介绍"
-    },
-    {
-      "name": "start",
-      "path": "/start",
-      "desc": "快速开始"
-    },
+    "开发指南": [{
+            "name": "giud",
+            "path": "/giud",
+            "desc": "介绍"
+        },
+        {
+            "name": "start",
+            "path": "/start",
+            "desc": "快速开始"
+        },
 
-    {
-      "name": "index",
-      "path": "/",
-      "type": "pages"
-    },
-    {
-      "name": "logs",
-      "path": "/logs",
-      "desc": "更新日志"
-    }
-  ],
-  "组件": [
-    {
-      "desc": "基础组件",
-      "path": "/component",
-      "items": [
-          {
-            "name": "custom",
-            "path": "/custom",
-            "desc": "颜色的使用"
-        },
         {
-          "desc": "Icon 图标",
-          "name": "icon",
-          "path": "/icon"
-        },
-        {
-          "desc": "Button 按钮",
-          "name": "button",
-          "path": "/button"
-        },
-        {
-          "desc": "Tips 提示",
-          "name": "tip",
-          "path": "/tip"
+            "name": "index",
+            "path": "/",
+            "type": "pages"
         }
-      ]
-    }
-  ]
+    ],
+    "组件": [{
+        "desc": "基础组件",
+        "path": "/component",
+        "items": [{
+                "name": "custom",
+                "path": "/custom",
+                "desc": "Color 色彩"
+            },
+            {
+                "name": "gird",
+                "path": "/gird",
+                "desc": "Gird 栅格"
+            },
+            {
+                "desc": "Icon 图标",
+                "name": "icon",
+                "path": "/icon"
+            },
+            {
+                "desc": "Button 按钮",
+                "name": "button",
+                "path": "/button"
+            },
+            {
+                "desc": "Divider 分割线",
+                "name": "divider",
+                "path": "/divider"
+            },
+            {
+                "desc": "Tips 提示",
+                "name": "tip",
+                "path": "/tip"
+            }
+        ]
+    }]
 }

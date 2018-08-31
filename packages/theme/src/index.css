@@ -1,9 +1,8 @@
 @import "button.css";
 @import "icon.css";
-@import "tag.css";
-@import "transiton.css";
-
-
+@import "row.css";
+@import "col.css";
+@import "divider.css"
 
 .dark{
     color: var(--dark)
