@@ -1,0 +1,5 @@
+@define-mixin fade $time{
+    transition-property: opacity, transform;
+    transition-duration: $(time);
+    transition-timing-function: cubic-bezier(0,.58,.01,.99);
+}

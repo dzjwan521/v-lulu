@@ -1,0 +1,52 @@
+@import "button.css";
+@import "icon.css";
+@import "row.css";
+@import "col.css";
+@import "divider.css";
+@import "tip.css";
+@import './date-picker/datepicker.css';
+@import './loadingbar.css';
+
+.dark {
+    color: var(--dark)
+}
+
+.blue {
+    color: var(--blue)
+}
+
+.darkblue {
+    color: var(--darkblue)
+}
+
+.silver {
+    color: var(--silver)
+}
+
+.gray {
+    color: var(--gray)
+}
+
+.grayDisabled {
+    color: var(--grayDisabled)
+}
+
+.white {
+    color: var(--white)
+}
+
+.green {
+    color: var(--green)
+}
+
+.orange {
+    color: var(--orange)
+}
+
+.red {
+    color: var(--red)
+}
+
+.light {
+    color: var(--light)
+}

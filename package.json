@@ -15,6 +15,7 @@
     "inquirer": "^6.2.0",
     "markdown-it-container": "^2.0.0",
     "vue": "^2.5.2",
+    "vue-datepicker-local": "^1.0.19",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

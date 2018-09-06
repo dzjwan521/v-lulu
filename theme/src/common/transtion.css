@@ -1,0 +1,148 @@
+@import "./var.css";
+@import './mixin.css';
+.router-fade-enter-active,
+.router-fade-leave-active{
+    @mixin fade 1s
+}
+
+.router-fade-enter,
+.router-fade-leave-to {
+    opacity: 0.1;
+    transform: translate3D(-10px, 0, 0);
+}
+
+.top-fade-enter-active,
+.top-fade-leave-active {
+    @mixin fade 1s
+}
+
+.top-fade-enter,
+.top-fade-leave-to {
+    opacity: 0;
+    transform: translate3D(0, 5px, 0);
+}
+
+.bottom-fade-enter-active,
+.bottom-fade-leave-active {
+    @mixin fade 1s
+
+}
+
+.bottom-fade-enter,
+.bottom-fade-leave-to {
+    opacity: 0;
+    transform: translate3D(0, -5px, 0);
+}
+
+.left-fade-enter-active,
+.left-fade-leave-active {
+    @mixin fade 1s
+}
+
+.left-fade-enter,
+.left-fade-leave-to {
+    opacity: 0;
+    transform: translate3D(5px, 0, 0);
+}
+
+.right-fade-enter-active,
+.right-fade-leave-active {
+    @mixin fade 1s
+}
+
+.right-fade-enter,
+.right-fade-leave-to {
+    opacity: 0;
+    transform: translate3D(-5px, 0, 0);
+}
+
+.lu-zoom-in-center-enter-active,
+.lu-zoom-in-center-leave-active {
+    transition: all .3s cubic-bezier(.55, 0, .1, 1);
+}
+
+.lu-zoom-in-center-enter,
+.lu-zoom-in-center-leave-active {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+@keyframes lu-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes lu-opacity {
+    0% {
+        opacity: 1;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    30% {
+        opacity: 0.7;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0.95;
+    }
+}
+
+@keyframes datepicker-anim-in {
+    0% {
+        opacity: 0;
+        transform: scaleY(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes datepicker-anim-out {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scaleY(0.8);
+    }
+}

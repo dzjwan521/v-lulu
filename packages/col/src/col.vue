@@ -4,7 +4,7 @@
  * @Author: dzj
  * @Date: 2018-08-30 10:44:43
  * @Last Modified by: dzj
- * @Last Modified time: 2018-08-31 11:00:28
+ * @Last Modified time: 2018-09-04 14:23:41
  */
   -->
 <script>
@@ -30,7 +30,7 @@
                 let parent = this.$parent;
                 while (parent && parent.$options._componentTag !== 'lu-Row') {
                     parent = parent.$parent;
-                    // console.log(parent);
+                    break;
                 }
                 return parent ? parent.gutter : 0;
             }

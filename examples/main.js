@@ -5,16 +5,24 @@ import App from './App'
 import router from './router'
 import demoBlock from './components/demo-block.vue'
 import LULU from '../packages/index'
-import '../packages/theme/lib/index.css'
+import '../theme/lib/index.css'
 
 Vue.component('demo-block', demoBlock)
 Vue.use(LULU)
+
+router.beforeEach((to, from, next) => {
+    LULU.loadingBar.start()
+    next()
+})
+router.afterEach((to, from) => {
+    LULU.loadingBar.end()
+});
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  render: h => h(App)
+    el: '#app',
+    router,
+    render: h => h(App)
 })

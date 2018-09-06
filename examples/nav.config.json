@@ -45,9 +45,19 @@
                 "path": "/divider"
             },
             {
-                "desc": "Tips 提示",
+                "desc": "Tip 提示",
                 "name": "tip",
                 "path": "/tip"
+            },
+            {
+                "desc": "DatePicker 时间控件",
+                "name": "datepicker",
+                "path": "/datepicker"
+            },
+            {
+                "desc": "loadingBar 加载进度条",
+                "name": "loadingbar",
+                "path": "/loadingbar"
             }
         ]
     }]

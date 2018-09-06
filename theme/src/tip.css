@@ -1,0 +1,103 @@
+@import './common/var.css';
+@import './common/transtion.css';
+@n lu {
+    @b tip {
+        display: inline-block;
+
+        @e real {
+            position: relative;
+        }
+
+        @e content {
+            padding: 8px 8px;
+            white-space: nowrap;
+            display: inline-block;
+            color: var(--white) var(--dark);
+            font-size: 12px;
+            border-radius: var(--borderRadius);
+            z-index: 1000;
+        }
+
+        @e arrow {
+            position: absolute;
+
+            @m placement {
+                &[x-placement^="top"] {
+                    bottom: -10px;
+                    triangle: 5px bottom var(--dark);
+
+                    &[x-placement$="start"] {
+                        left: 20px;
+                        transform: translateX(-50%);
+                    }
+
+                    &[x-placement$="end"] {
+                        right: 20px;
+                        transform: translateX(50%);
+                    }
+
+                    &[x-placement$="center"] {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+
+                &[x-placement^="bottom"] {
+                    triangle: 5px top var(--dark);
+                    top: -9px;
+
+                    &[x-placement$="start"] {
+                        left: 20px;
+                        transform: translateX(-50%);
+                    }
+
+                    &[x-placement$="end"] {
+                        right: 20px;
+                        transform: translateX(50%);
+                    }
+
+                    &[x-placement$="center"] {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+
+                &[x-placement^="left"] {
+                    triangle: 5px right var(--dark);
+                    right: -10px;
+
+                    &[x-placement$="start"] {
+                        top: 30%;
+                    }
+
+                    &[x-placement$="center"] {
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    &[x-placement$="end"] {
+                        bottom: 30%;
+                        /* transform: translateY(50%); */
+                    }
+                }
+
+                &[x-placement^="right"] {
+                    triangle: 5px left var(--dark);
+                    left: -10px;
+
+                    &[x-placement$="start"] {
+                        top: 30%;
+                    }
+
+                    &[x-placement$="end"] {
+                        bottom: 30%;
+                    }
+
+                    &[x-placement$="center"] {
+                        bottom: 30%;
+                    }
+                }
+            }
+        }
+    }
+}

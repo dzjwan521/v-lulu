@@ -1,0 +1,51 @@
+@import "./common/var.css";
+@import "./common/transtion.css";
+@n lu {
+  @b loadingBar {
+    @e bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      z-index: 9999;
+      transition: all 200ms ease;
+      transform: translate3d(-100%, 0, 0);
+      background: var(--blue);
+    }
+    @e error {
+      background: var(--red)
+    }
+
+    @e peg {
+      display: block;
+      position: absolute;
+      right: 0;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--blue), 0 0 5px var(--green);
+      opacity: 1.0;
+      transform: rotate(3deg) translate(0px,-4px);
+    }
+    @e spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+      .spinner-icon{
+        width: 18px;
+        height: 18px;
+        box-sizing: border-box;
+        border: solid 2px transparent;
+        border-top-color: var(--blue);
+        border-left-color: var(--blue);
+        border-radius: 50%;
+      }
+      .spinner-icon--error{
+        border-top-color: var(--backgroundRed);
+        border-left-color: var(--backgroundRed);
+      }
+    }
+  }
+}
