@@ -3,7 +3,6 @@
   -------------------------- */
     --all-transition: all .3s cubic-bezier(.645, .045, .355, 1);
     --fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    --tip-transition: opacity, transform .8s cubic-bezier(0.23, 1, 0.32, 1);
     --fade-linear-transition: opacity 200ms linear;
     --md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
     --border-transition: border-color .3s cubic-bezier(.645, .045, .355, 1);
@@ -32,6 +31,9 @@
     /* // 出错使用 */
     --light: #f7f9fa;
     /* // 很轻的灰色，常做背景色使用 */
+    --yellow: #50bfff;
+    /* 黄色，信息背景色 */
+
     /* // 边框控制 */
     --borderNormal: #d0d0d5;
     --borderHover: #ababaf;
@@ -64,4 +66,18 @@
     --backgroundDark: #373c42;
     /* // UI组件的圆角大小 */
     --borderRadius: 4px;
+
+
+
+  --tag-success-fill: rgba(18,206,102,0.10);
+  --tag-success-border: rgba(18,206,102,0.20);
+  --tag-success-color: var(--green);
+
+  --tag-warning-fill: rgba(247,186,41,0.10);
+  --tag-warning-border: rgba(247,186,41,0.20);
+  --tag-warning-color: var(--orange);
+
+  --tag-danger-fill: rgba(255,73,73,0.10);
+  --tag-danger-border: rgba(255,73,73,0.20);
+  --tag-danger-color: var(--red);
 }

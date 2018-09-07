@@ -5,7 +5,8 @@ import Divider from './divider/index'
 import Tip from './tip/index'
 import luDatePicker from './date-picker/index'
 import loadingBar from './loading-bar/index'
-
+import Alert from './alert'
+import Tag from './tag'
 const components = [
     Button,
     Row,
@@ -13,6 +14,8 @@ const components = [
     Divider,
     Tip,
     luDatePicker,
+    Alert,
+    Tag
 ]
 
 const install = function (Vue) {
@@ -33,5 +36,7 @@ export default {
     Divider,
     Tip,
     luDatePicker,
-    loadingBar
+    loadingBar,
+    Alert,
+    Tag
 }

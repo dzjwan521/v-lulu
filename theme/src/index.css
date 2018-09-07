@@ -6,7 +6,10 @@
 @import "tip.css";
 @import './date-picker/datepicker.css';
 @import './loadingbar.css';
-
+@import './input.css';
+@import './show-more.css';
+@import './tag.css';
+@import './alert.css';
 .dark {
     color: var(--dark)
 }

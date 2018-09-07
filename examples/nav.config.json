@@ -58,6 +58,16 @@
                 "desc": "loadingBar 加载进度条",
                 "name": "loadingbar",
                 "path": "/loadingbar"
+            },
+            {
+                "desc": "input 输入框",
+                "name": "input",
+                "path": "/input"
+            },
+            {
+                "desc": "tag 标签",
+                "name": "tag",
+                "path": "/tag"
             }
         ]
     }]

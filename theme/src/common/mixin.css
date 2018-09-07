@@ -1,5 +1,11 @@
-@define-mixin fade $time{
+@define-mixin fade $time {
+    will-change: transform opacity;
     transition-property: opacity, transform;
     transition-duration: $(time);
-    transition-timing-function: cubic-bezier(0,.58,.01,.99);
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@define-mixin slide $time {
+    will-change: transform;
+    transition: transform $(time) linear;
 }

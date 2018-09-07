@@ -1,8 +1,18 @@
 @import "./var.css";
 @import './mixin.css';
+.slide-top-enter-active,
+.slide-top-leave-active{
+    @mixin slide .8s;
+}
+
+.slide-top-enter,
+.slide-top-leave-to {
+    transform: translate3D(0, -100%,0);
+}
+
 .router-fade-enter-active,
 .router-fade-leave-active{
-    @mixin fade 1s
+    @mixin fade .3s
 }
 
 .router-fade-enter,
