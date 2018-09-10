@@ -1,19 +1,19 @@
 <template>
-  <transition name="lu-alert-fade">
+  <transition name="fade">
     <div class="lu-alert"
          :class="[ typeClass, {'is-center': center} ]"
          v-show="visible">
-      <i class="lu-alert__icon"
+      <i class="lu-alert_icon"
          :class="[ iconClass, isBigIcon ]"
          v-if="showIcon"></i>
-      <div class="lu-alert__content">
-        <span class="lu-alert__title"
+      <div class="lu-alert_content">
+        <span class="lu-alert_title"
               :class="isBoldTitle"
               style="">{{this.title}}</span>
-        <p class="lu-alert__description"
+        <p class="lu-alert_description"
            v-if="description">{{description}}</p>
         <i v-if="closable"
-           class="lu-alert__closebtn"
+           class="lu-alert_closebtn"
            :class="[ closeText ? 'is-customed' : 'lu-icon-close2']"
            @click="close">{{closeText}}</i>
       </div>
@@ -35,7 +35,7 @@
     }
 
     export default {
-        name: "WAlert",
+        name: "luAlert",
         props: {
             title: {
                 type: String,
@@ -75,12 +75,12 @@
         },
         computed: {
             typeClass() {
-                return `lu-alert--${this.type}`;
+                return `lu-alert_${this.type}`;
             },
             iconClass() {
                 //暂无对应图标
                 // return `lu-icon--${this.type}`
-                return "lu-icon-fav";
+                return "lu-icon-favfill";
             },
             isBoldTitle() {
                 return this.description ? "is-bold" : "";

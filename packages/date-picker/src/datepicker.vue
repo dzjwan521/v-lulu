@@ -1,6 +1,6 @@
 <template>
 <div class="lu-datepicker" :class="{'lu-datepicker-range':range,'lu-datepicker__clearable':clearable&&text&&!disabled}">
-  <input readonly :value="text" :class="[show ? 'focus' : '', inputClass]" :disabled="disabled" :placeholder="placeholder" :name="name" v-if="type!=='inline'"/>
+  <input readonly :value="text" :class="classes" :disabled="disabled" :placeholder="placeholder" :name="name"  v-if="type!=='inline'"/>
   <a class="lu-datepicker-close" @click.stop="cls"></a>
   <transition name="lu-datepicker-anim">
     <div class="lu-datepicker-popup" :class="[popupClass,{'lu-datepicker-inline':type==='inline'}]" tabindex="-1" v-if="show||type==='inline'">
@@ -28,6 +28,7 @@
         props: {
             name: [String],
             inputClass: [String],
+            size: [String],
             popupClass: [String],
             value: [Date, Array, String],
             disabled: [Boolean],
@@ -95,6 +96,12 @@
                 } else {
                     return val ? txt : ''
                 }
+            },
+            classes(){
+                const style = []
+                style.push(this.inputClass)
+                this.show && style.push('focus') 
+                this.size && style.push(`size_${this.size}`)
             }
         },
         watch: {

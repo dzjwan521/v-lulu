@@ -1,0 +1,147 @@
+@import './common/var.css';
+@import './common/transtion.css';
+
+@n lu {
+    @b input {
+        display: inline-block;
+        position: relative;  
+       
+        @e icon {
+            font-size: 18px;
+            position: absolute;
+            transition:color .15s;
+            color:var(--grayDisabled);
+            
+            &.lu-icon-closefill {
+                cursor: pointer;
+                display: none;
+                top:10px;
+                right: 8px;
+                z-index:100;
+                
+            }
+            &.lu-icon-closefill:hover{
+                display: inline-block;
+                color:var(--dark);
+            }
+            
+            @when prefix{
+                &{
+                   top:10px;
+                    left: 8px;
+                }
+            }
+            @when suffix{
+                &{
+                   top:10px;
+                    right: 8px;
+                }
+            }
+        }
+
+        @e default {
+            border-radius: var(--borderRadius);
+            display: inline-block;
+            appearance: none;
+            padding: 8px 11px;
+            overflow: visible;
+            font-size: 14px;
+            border: 1px solid var(--borderNormal);
+            background-color: #fff;
+            outline: none;
+            color: var(--dark);
+            transition: var(--border-transition), background-color .15s;
+
+            @m large {
+                padding: 11px 11px;
+                font-size: 14px;
+            }
+
+            @m small {
+                padding: 6px 7px;
+                font-size: 12px;
+                border-radius: 3px;
+            }
+            @when clearable{
+                padding-right:30px;
+                &:focus+.lu-icon-closefill {
+                    display: inline-block;
+                }
+                &:hover+.lu-icon-closefill {
+                    display: inline-block;
+                }
+                &:hover+i+i{
+                    display: none;
+                }
+                &:focus+i+i{
+                    display: none;
+                }
+            }
+            @when prefix{
+                    padding-left:30px;
+            }
+            @when suffix{
+                    padding-right:30px;
+            }
+            
+            &:hover {
+                color: var(--dark);
+                border-color: var(--borderHover);
+            }
+            
+            &:focus {
+                border: 1px solid var(--backgroundBlue);
+            }
+
+            &[disabled] {
+                background-color: #f7f9fa;
+                cursor: not-allowed;
+            }
+
+            &[disabled]:hover,
+            &[readonly]:hover,
+            &[readonly]:focus {
+                border-color: #d0d0d5;
+            }
+
+            &::-webkit-input-placeholder {
+                color: #aab2bd;
+            }
+
+            &:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0 1000px #fff inset;
+                background-color: transparent;
+            }
+            
+            &[type=search] {
+                -webkit-appearance: none;
+                box-sizing: content-box;
+            }
+
+            &:not([type=search])::-ms-clear {
+                display: none;
+            }
+
+            &[type=search]::-webkit-search-cancel-button {
+                -webkit-appearance: none;
+            }
+
+            &[type=search]::-webkit-search-cancel-button:hover {
+                background-color: #4c5161;
+            }
+
+            &[type="search"]::-webkit-search-results-decoration {
+                display: none;
+            }
+
+            &:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0 1000px #fff inset;
+                background-color: transparent;
+            }
+
+            @when error {
+                border-color: #f4615c !important;
+            }
+        }
+    }
+}

@@ -1,19 +1,15 @@
 <template>
-  <div id="app">
+  <div id="app" >
     <mainHeader></mainHeader>
-    <div class="container" v-if="!isIndex">
+    <div v-if="isIndex" class="index">
+            <router-view class="page" ></router-view>
+    </div>
+    <div class="container" v-else>
         <sideNav class="nav"></sideNav>
-        <transition name="router-fade" mode="out-in">
+        <transition :name="type" mode="out-in"  v-on:after-leave="afterLeave">
             <router-view  class="view"></router-view>
         </transition>
     </div>
-    <transition  name="slide-top" mode="out-in">
-        <div v-if="isIndex" class="index">
-            <router-view class="page" ></router-view>
-        </div>
-    </transition>
-
-
     <!-- <mainFooter v-if="!isIndex"></mainFooter> -->
   </div>
 </template>
@@ -28,9 +24,19 @@
         data() {
             return {
                 init: false,
-                isIndex: true
+                isIndex: true,
+                animation: ['router-fade', 'lu-zoom-in-center', 'slide-top'],
+                type: 'router-fade'
             }
         },
+        methods: {
+            afterLeave() {
+                const len = this.animation.length
+                const num = Math.floor(Math.random() * len)
+                this.type = this.animation[num]
+            }
+        }
+        ,
         watch: {
             $route() {
                 this.isIndex = this.$route.name === 'index'
@@ -52,12 +58,17 @@
 
 <style lang="less" type="text/less">
 @import "./assets/less/index";
-
+#app {
+  width: 100vw;
+  height: 100vh;
+}
 .container {
   margin: 0 auto;
   width: 100%;
+  background: #f7f9fa;
   background-color: #fff;
-  //   box-shadow: 0 4px 30px 0 rgba(223, 225, 230, 0.5);
+  padding: 20px;
+  box-shadow: 0 4px 30px 0 rgba(223, 225, 230, 0.5);
   .nav {
     float: left;
     width: 210px;

@@ -67,21 +67,24 @@
     font-size: 14px;
     width: 100%;
     user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
+    &.size_large{
+        height:40px;
+    }
+    &.size_small{
+        height:28px;
+        font-size: 12px;
+    }
 }
 
 .lu-datepicker>input.focus {
     border-color: var(--backgroundBlue);
-    -webkit-box-shadow: 0 0 5px rgba(59, 180, 242, 0.3);
     box-shadow: 0 0 5px rgba(59, 180, 242, 0.3);
 }
 
 .lu-datepicker>input:disabled {
     cursor: not-allowed;
-    background-color: #ebebe4;
-    border-color: #e5e5e5;
+    background-color: #f7f9fa;
+    border-color: var(--borderNormal);
     -webkit-box-shadow: none;
     box-shadow: none;
 }

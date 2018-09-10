@@ -68,6 +68,14 @@
                 "desc": "tag 标签",
                 "name": "tag",
                 "path": "/tag"
+            }, {
+                "desc": "alert 警告提示",
+                "name": "alert",
+                "path": "/alert"
+            }, {
+                "desc": "show-more 警告提示",
+                "name": "show-more",
+                "path": "/show-more"
             }
         ]
     }]

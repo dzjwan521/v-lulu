@@ -7,6 +7,8 @@ import luDatePicker from './date-picker/index'
 import loadingBar from './loading-bar/index'
 import Alert from './alert'
 import Tag from './tag'
+import Input from './input'
+import Showmore from './show-more'
 const components = [
     Button,
     Row,
@@ -15,7 +17,9 @@ const components = [
     Tip,
     luDatePicker,
     Alert,
-    Tag
+    Tag,
+    Showmore,
+    Input
 ]
 
 const install = function (Vue) {
@@ -38,5 +42,7 @@ export default {
     luDatePicker,
     loadingBar,
     Alert,
-    Tag
+    Tag,
+    Showmore,
+    Input
 }

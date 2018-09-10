@@ -1,13 +1,13 @@
 @import "./var.css";
 @import './mixin.css';
-.slide-top-enter-active,
-.slide-top-leave-active{
-    @mixin slide .8s;
+.slide-right-enter-active,
+.slide-right-leave-active{
+    @mixin slide .4s;
 }
 
-.slide-top-enter,
-.slide-top-leave-to {
-    transform: translate3D(0, -100%,0);
+.slide-right-enter,
+.slide-right-leave-to {
+    transform: translate3D(100%, 0,0);
 }
 
 .router-fade-enter-active,
