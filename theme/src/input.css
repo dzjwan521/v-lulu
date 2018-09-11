@@ -4,36 +4,38 @@
 @n lu {
     @b input {
         display: inline-block;
-        position: relative;  
-       
+        position: relative;
+
         @e icon {
             font-size: 18px;
             position: absolute;
-            transition:color .15s;
-            color:var(--grayDisabled);
-            
+            transition: color .15s;
+            color: var(--grayDisabled);
+
             &.lu-icon-closefill {
                 cursor: pointer;
                 display: none;
-                top:10px;
+                top: 10px;
                 right: 8px;
-                z-index:100;
-                
+                z-index: 100;
+
             }
-            &.lu-icon-closefill:hover{
+
+            &.lu-icon-closefill:hover {
                 display: inline-block;
-                color:var(--dark);
+                color: var(--dark);
             }
-            
-            @when prefix{
-                &{
-                   top:10px;
+
+            @when prefix {
+                & {
+                    top: 10px;
                     left: 8px;
                 }
             }
-            @when suffix{
-                &{
-                   top:10px;
+
+            @when suffix {
+                & {
+                    top: 10px;
                     right: 8px;
                 }
             }
@@ -62,33 +64,40 @@
                 font-size: 12px;
                 border-radius: 3px;
             }
-            @when clearable{
-                padding-right:30px;
+
+            @when clearable {
+                padding-right: 30px;
+
                 &:focus+.lu-icon-closefill {
                     display: inline-block;
                 }
+
                 &:hover+.lu-icon-closefill {
                     display: inline-block;
                 }
-                &:hover+i+i{
+
+                &:hover+i+i {
                     display: none;
                 }
-                &:focus+i+i{
+
+                &:focus+i+i {
                     display: none;
                 }
             }
-            @when prefix{
-                    padding-left:30px;
+
+            @when prefix {
+                padding-left: 30px;
             }
-            @when suffix{
-                    padding-right:30px;
+
+            @when suffix {
+                padding-right: 30px;
             }
-            
+
             &:hover {
                 color: var(--dark);
                 border-color: var(--borderHover);
             }
-            
+
             &:focus {
                 border: 1px solid var(--backgroundBlue);
             }
@@ -112,7 +121,7 @@
                 -webkit-box-shadow: 0 0 0 1000px #fff inset;
                 background-color: transparent;
             }
-            
+
             &[type=search] {
                 -webkit-appearance: none;
                 box-sizing: content-box;

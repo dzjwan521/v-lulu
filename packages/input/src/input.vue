@@ -15,7 +15,7 @@
         <i v-show="clearable" class="lu-icon-closefill lu-input_icon"  @click="clear"></i>
         <i v-show="suffix" class="lu-input_icon" :class="[suffix,suffix&&'is-suffix']" @click.stop="$emit('icon-click',$event)"></i>
         <i v-show="prefix" class="lu-input_icon" :class="[prefix,prefix&&'is-prefix']"></i>
-       
+
   </div>
 </template>
 
@@ -68,7 +68,7 @@
                 this.suffix && list.push('is-suffix')
                 return list
             },
-            
+
         },
         methods: {
             setCurrentValue(value) {
