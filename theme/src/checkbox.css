@@ -1,0 +1,71 @@
+@import './common/transtion.css';
+
+@n lu {
+    @b checkbox {
+        position: relative;
+
+        @e label {
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #d0d0d5;
+                border-radius: 4px;
+                box-sizing: border-box;
+                color: #d0d0d5;
+                transition: color .2s,
+                    border-color .2s;
+                user-select: none;
+                vertical-align: -5px;
+                overflow: hidden;
+            }
+
+            @when focus {
+                &::before {
+                    border-color: var(--blue);
+                }
+            }
+
+            &:hover:before {
+                border-color: #ababaf;
+            }
+
+            @when disabled {
+                border-color: #ababaf;
+                opacity: .38;
+                cursor: not-allowed;
+
+                &:before {
+                    border-color: #ababaf;
+                    opacity: .38
+                }
+            }
+
+        }
+
+        @e input {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+
+            &:checked+span {
+                visibility: visible;
+                animation: bounceIn .2s;
+            }
+        }
+
+        @e inner {
+            display: inline-block;
+            position: absolute;
+            top: -2px;
+            left: 0px;
+            border-radius: 4px;
+            width: 20px;
+            height: 20px;
+            background: var(--blue) url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNDcuNTY3LDY3LjU3NWMtMy45NzgtMy4yNDEtNC4zNTYtMy4zMzctOC45LTUuNjM5Yy0yLjA0NC0xLjA0NC01LjA1NywxLjY0NS02LjUzLDMuNjM1TDkyLDExNy43MjgNCglMNjUuODUxLDgzLjk3M2MtMS40NzktMS45ODgtNC4yMDYtMi43Mi02LjI1MS0xLjc4MmMtNC42NTgsMi40MDctNC4xODksMi4zMjYtOC4xNjgsNS40NjZjLTEuODE3LDEuNDY2LTEuOTMyLDQuMDgyLTAuNDU2LDYuMDY1DQoJYzAsMCwyOC4xODMsMzYuNDk5LDMxLjU5Miw0MC44OTZjNC45OTksNi4yNzUsMTQuMDksNS45NjUsMTguODY0LDBjMy41Mi00LjQ5OCw0Ni41OS02MS4wNzgsNDYuNTktNjEuMDc4DQoJQzE0OS40OTksNzEuNTQ5LDE0OS4zODUsNjguOTM3LDE0Ny41NjcsNjcuNTc1eiIvPg0KPC9zdmc+DQo=") no-repeat center;
+            background-size: 20px 20px;
+            visibility: hidden;
+
+        }
+    }
+}

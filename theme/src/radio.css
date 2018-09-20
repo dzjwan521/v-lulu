@@ -1,0 +1,73 @@
+@import './common/transtion.css';
+
+@n lu {
+    @b radio {
+        @e label {
+            position: relative;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border: 1px solid rgba(208, 208, 213, 0.99);
+                border-radius: 50%;
+                background-color: #fff;
+                box-sizing: border-box;
+                vertical-align: -.5ex;
+                user-select: none;
+                transition: border-color .2s;
+                overflow: hidden;
+            }
+
+            @when focus {
+                &::before {
+                    border-color: var(--blue);
+                }
+            }
+
+            &:hover:before {
+                border-color: #ababaf;
+            }
+
+            &[disabled]:before {
+                border-color: #ababaf;
+                opacity: .38
+            }
+
+            &[disabled] {
+                border-color: #ababaf;
+                opacity: .38;
+            }
+
+        }
+
+        @e inner {
+            display: inline-block;
+            position: absolute;
+            top: -2px;
+            left: 5px;
+            width: 10px;
+            height: 10px;
+            margin: 4px auto 0;
+            border-radius: 50%;
+            background-color: var(--blue);
+            visibility: hidden;
+
+        }
+
+        @e input {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+
+            &:checked+span {
+                visibility: visible;
+                animation: bounceIn .2s;
+            }
+        }
+
+        @e text {
+            font-size: 14px;
+        }
+    }
+}

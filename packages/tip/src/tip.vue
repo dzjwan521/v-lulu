@@ -157,12 +157,12 @@
                 event && event.stopPropagation()
                 this.isShow = true
                 this.getContentStyle()
-                this.onShow && this.onShow()
+                this.$emit('show')
             },
             hide(event) {
                 event && event.stopPropagation()
                 this.isShow = false
-                this.onShow && this.onHide()
+                this.$emit('show')
 
             },
             clickHanlde() {

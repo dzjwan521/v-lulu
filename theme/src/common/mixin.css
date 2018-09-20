@@ -9,3 +9,9 @@
     will-change: transform;
     transition: transform $(time) linear;
 }
+
+@define-mixin height $time {
+    will-change: height;
+    transition-property: height;
+    transition-duration: $(time);
+}

@@ -8,7 +8,11 @@ import loadingBar from './loading-bar/index'
 import Alert from './alert'
 import Tag from './tag'
 import Input from './input'
+import Modal from './modal'
+import Radio from './radio'
+import Checkbox from './checkbox'
 import Showmore from './show-more'
+
 const components = [
     Button,
     Row,
@@ -19,13 +23,19 @@ const components = [
     Alert,
     Tag,
     Showmore,
-    Input
+    Input,
+    Radio,
+    Checkbox
 ]
 
 const install = function (Vue) {
     if (install.installed) return
     components.map(component => Vue.component(component.name, component))
     Vue.prototype.$loadingBar = loadingBar
+    Vue.prototype.$modal = Modal
+    Vue.prototype.$alert = Modal.alert
+    Vue.prototype.$prompt = Modal.prompt
+    Vue.prototype.$confirm = Modal.confirm
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -44,5 +54,8 @@ export default {
     Alert,
     Tag,
     Showmore,
-    Input
+    Input,
+    Modal,
+    Radio,
+    Checkbox
 }

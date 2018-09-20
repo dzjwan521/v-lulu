@@ -5,74 +5,66 @@
     @b input {
         display: inline-block;
         position: relative;
+        width: 100%;
 
         @e icon {
             font-size: 18px;
             position: absolute;
             transition: color .15s;
             color: var(--grayDisabled);
+            top: 8px;
 
-            &.lu-icon-closefill {
+            &:hover {
+                color: rgba(var(--dark), .6);
+            }
+
+            @when prefix {
+                left: 8px;
+            }
+
+            @when suffix {
+                right: 8px;
+            }
+
+            &.icon-roundclosefill {
                 cursor: pointer;
                 display: none;
-                top: 10px;
+                top: 8px;
                 right: 8px;
                 z-index: 100;
 
             }
 
-            &.lu-icon-closefill:hover {
+            &.icon-roundclosefill:hover {
                 display: inline-block;
-                color: var(--dark);
             }
 
-            @when prefix {
-                & {
-                    top: 10px;
-                    left: 8px;
-                }
-            }
 
-            @when suffix {
-                & {
-                    top: 10px;
-                    right: 8px;
-                }
-            }
         }
 
         @e default {
-            border-radius: var(--borderRadius);
-            display: inline-block;
             appearance: none;
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100%;
+            outline: none;
             padding: 8px 11px;
             overflow: visible;
             font-size: 14px;
             border: 1px solid var(--borderNormal);
+            border-radius: var(--borderRadius);
             background-color: #fff;
-            outline: none;
             color: var(--dark);
             transition: var(--border-transition), background-color .15s;
-
-            @m large {
-                padding: 11px 11px;
-                font-size: 14px;
-            }
-
-            @m small {
-                padding: 6px 7px;
-                font-size: 12px;
-                border-radius: 3px;
-            }
 
             @when clearable {
                 padding-right: 30px;
 
-                &:focus+.lu-icon-closefill {
+                &:focus+.icon-roundclosefill {
                     display: inline-block;
                 }
 
-                &:hover+.lu-icon-closefill {
+                &:hover+.icon-roundclosefill {
                     display: inline-block;
                 }
 
@@ -91,6 +83,59 @@
 
             @when suffix {
                 padding-right: 30px;
+
+            }
+
+            @m large {
+                padding: 11px 11px;
+                font-size: 14px;
+
+                @when clearable {
+                    &+.icon-roundclosefill {
+                        top: 10px;
+                    }
+                }
+
+                @when prefix {
+                    &+i+i+i {
+                        top: 10px;
+                        font-size: 20px;
+                    }
+                }
+
+                @when suffix {
+                    &+i+i {
+                        top: 10px;
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            @m small {
+                padding: 6px 7px;
+                font-size: 12px;
+                border-radius: 3px;
+
+                @when clearable {
+                    &+.icon-roundclosefill {
+                        top: 8px;
+                        font-size: 14px;
+                    }
+                }
+
+                @when prefix {
+                    &+i+i+i {
+                        top: 8px;
+                        font-size: 14px;
+                    }
+                }
+
+                @when suffix {
+                    &+i+i {
+                        top: 8px;
+                        font-size: 14px;
+                    }
+                }
             }
 
             &:hover {
@@ -124,7 +169,7 @@
 
             &[type=search] {
                 -webkit-appearance: none;
-                box-sizing: content-box;
+                box-sizing: border-box;
             }
 
             &:not([type=search])::-ms-clear {

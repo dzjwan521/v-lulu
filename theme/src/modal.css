@@ -1,0 +1,101 @@
+@import './common/transtion.css';
+
+@n lu {
+    @b popup {
+        position: fixed 0 0 0 0;
+        size: 100%;
+        z-index: 2000;
+        height: 100vh;
+
+        @e mask {
+            position: absolute 0 0 0 0;
+            size: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+        }
+
+        @e section {
+            position: relative 30% * * 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            z-index: 2000;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .3)
+        }
+
+        @e header {
+            height: 42px;
+            font-size: 0px;
+            font-weight: 500;
+
+            @e title {
+                display: inline-block;
+                vertical-align:middle;
+                height: 16px;
+                font-size: 16px;
+                height: 42px;
+                line-height: 42px;
+                 margin-left:10px;
+            }
+            @e icon {
+                font-size: 28px;
+                line-height: 42px;
+                margin-left: 10px;
+                vertical-align:middle;
+
+                @m info{
+                    color:var(--blue);
+                    &::before{content:"\e6e4";}
+                }
+                @m success{
+                    color:var(--green);
+                    &::before{content:"\e656";}
+                }
+                @m warning{
+                    color:var(--orange);
+                    &::before{content:"\e662";}
+                }
+                @m question{
+                    color:var(--yellow);
+                    &::before{content:"\e690";}
+                }
+                @m danger{
+                    color:var(--red);
+                    &::before{content:"\e658";}
+                }
+            }
+            .icon-close {
+                position: absolute;
+                top: 13px;
+                right: 10px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: all .5s;
+
+                &:hover {
+                    transform: rotate(180deg);
+                    color: #000;
+                }
+            }
+        }
+
+        @e body {
+            padding: 10px 20px;
+        }
+
+        @e footer {
+            padding: 10px;
+            @utils-clearfix;
+        }
+
+        @e btn {
+            float: right;
+            overflow: hidden;
+        }
+
+        @e input {
+            margin-top: 10px;
+        }
+    }
+}

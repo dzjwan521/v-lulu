@@ -9,7 +9,11 @@
             "path": "/start",
             "desc": "快速开始"
         },
-
+        {
+            "name": "logs",
+            "path": "/logs",
+            "desc": "开发日志"
+        },
         {
             "name": "index",
             "path": "/",
@@ -17,66 +21,89 @@
         }
     ],
     "组件": [{
-        "desc": "基础组件",
-        "path": "/component",
-        "items": [{
-                "name": "custom",
-                "path": "/custom",
-                "desc": "Color 色彩"
-            },
-            {
-                "name": "gird",
-                "path": "/gird",
-                "desc": "Gird 栅格"
-            },
-            {
-                "desc": "Icon 图标",
-                "name": "icon",
-                "path": "/icon"
-            },
-            {
-                "desc": "Button 按钮",
-                "name": "button",
-                "path": "/button"
-            },
-            {
-                "desc": "Divider 分割线",
-                "name": "divider",
-                "path": "/divider"
-            },
-            {
-                "desc": "Tip 提示",
-                "name": "tip",
-                "path": "/tip"
-            },
-            {
-                "desc": "DatePicker 时间控件",
-                "name": "datepicker",
-                "path": "/datepicker"
-            },
-            {
-                "desc": "loadingBar 加载进度条",
-                "name": "loadingbar",
-                "path": "/loadingbar"
-            },
-            {
-                "desc": "input 输入框",
-                "name": "input",
-                "path": "/input"
-            },
-            {
-                "desc": "tag 标签",
-                "name": "tag",
-                "path": "/tag"
-            }, {
-                "desc": "alert 警告提示",
-                "name": "alert",
-                "path": "/alert"
-            }, {
-                "desc": "show-more 警告提示",
-                "name": "show-more",
-                "path": "/show-more"
-            }
-        ]
-    }]
+            "desc": "基础",
+            "path": "/component",
+            "items": [{
+                    "name": "custom",
+                    "path": "/custom",
+                    "desc": "Color 色彩"
+                },
+                {
+                    "name": "gird",
+                    "path": "/gird",
+                    "desc": "Gird 栅格"
+                },
+                {
+                    "desc": "Icon 图标",
+                    "name": "icon",
+                    "path": "/icon"
+                },
+                {
+                    "desc": "Button 按钮",
+                    "name": "button",
+                    "path": "/button"
+                }
+            ]
+        },
+        {
+            "desc": "表单",
+            "path": "/component",
+            "items": [{
+                    "desc": "DatePicker 时间控件",
+                    "name": "datepicker",
+                    "path": "/datepicker"
+                }, {
+                    "desc": "Checkbox 复选框",
+                    "name": "checkbox",
+                    "path": "/checkbox"
+                }, {
+                    "desc": "Radio 单选框",
+                    "name": "radio",
+                    "path": "/radio"
+                },
+                {
+                    "desc": "input 输入框",
+                    "name": "input",
+                    "path": "/input"
+                }
+            ]
+        },
+        {
+            "desc": "提示",
+            "path": "/component",
+            "items": [{
+                    "desc": "Divider 分割线",
+                    "name": "divider",
+                    "path": "/divider"
+                },
+                {
+                    "desc": "Tip 提示",
+                    "name": "tip",
+                    "path": "/tip"
+                },
+                {
+                    "desc": "loadingBar 加载进度条",
+                    "name": "loadingbar",
+                    "path": "/loadingbar"
+                },
+                {
+                    "desc": "Tag 标签",
+                    "name": "tag",
+                    "path": "/tag"
+                }, {
+                    "desc": "Alert 警告提示",
+                    "name": "alert",
+                    "path": "/alert"
+                }, {
+                    "desc": "Show-more 显示更多",
+                    "name": "show-more",
+                    "path": "/show-more"
+                }, {
+                    "desc": "Modal 弹窗",
+                    "name": "modal",
+                    "path": "/modal"
+                }
+            ]
+        }
+    ]
 }

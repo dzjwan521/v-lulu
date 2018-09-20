@@ -64,7 +64,6 @@
 }
 .container {
   margin: 0 auto;
-  width: 100%;
   background: #f7f9fa;
   background-color: #fff;
   padding: 20px;

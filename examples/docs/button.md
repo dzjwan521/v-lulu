@@ -112,21 +112,21 @@
 带图标的按钮可增强辨识度（有文字）或节省空间（无文字）。
 设置```icon```属性即可，icon 的列表可以参考 VV-UI 的 icon 组件，也可以设置在文字右边的 icon ，只要使用```i```标签即可，可以使用自定义图标。
 <div class="demo-block">
-  <lu-button icon="lu-icon-tag" type="primary"></lu-button>
-  <lu-button icon="lu-icon-close" type="primary"></lu-button>
-  <lu-button icon="lu-icon-smile" type="primary"></lu-button>
-  <lu-button icon="lu-icon-search" type="primary">搜索</lu-button>
-  <lu-button icon="lu-icon-cloudfill" type="primary">下载</lu-button>
+  <lu-button icon="iconfont icon-my_fill_light" type="primary"></lu-button>
+  <lu-button icon="iconfont icon-comment_light" type="primary"></lu-button>
+  <lu-button icon="iconfont icon-share_light" type="primary"></lu-button>
+  <lu-button icon="iconfont icon-search_light" type="primary">搜索</lu-button>
+  <lu-button icon="iconfont icon-down" type="primary">下载</lu-button>
 </div>
 
 ::: demo
 ```html
 
-<lu-button icon="lu-icon-tag" type="primary"></lu-button>
-<lu-button icon="lu-icon-close" type="primary"></lu-button>
-<lu-button icon="lu-icon-smile" type="primary"></lu-button>
-<lu-button icon="lu-icon-search" type="primary">搜索</lu-button>
-<lu-button icon="lu-icon-cloudfill" type="primary">下载</lu-button>
+<lu-button icon="iconfont icon-my_fill_light" type="primary"></lu-button>
+  <lu-button icon="iconfont icon-comment_light" type="primary"></lu-button>
+  <lu-button icon="iconfont icon-share_light" type="primary"></lu-button>
+  <lu-button icon="iconfont icon-search_light" type="primary">搜索</lu-button>
+  <lu-button icon="iconfont icon-down" type="primary">下载</lu-button>
 
 ```
 :::
@@ -160,7 +160,7 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
  <div>
     <lu-button :loading="loading">下载中</lu-button>
     <lu-button type="primary"  :loading="loading">加载中...</lu-button>
-    <lu-button type="primary" plain :loading="load" @click="load=!load" icon="lu-icon-cloudfill">点击切换loading</lu-button>
+    <lu-button type="primary" plain :loading="load" @click="load=!load" icon="iconfont icon-upload">点击切换loading</lu-button>
 
   </div>
 
@@ -173,7 +173,7 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
 <div>
     <lu-button :loading="loading">下载中</lu-button>
     <lu-button type="primary"  :loading="loading">加载中...</lu-button>
-    <lu-button type="primary" plain :loading="load" @click="load=!load">点击切换loading</lu-button>
+    <lu-button type="primary" plain :loading="load" @click="load=!load" icon="iconfont icon-upload">点击切换loading</lu-button>
 
   </div>
 <script>

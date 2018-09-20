@@ -29,48 +29,30 @@
             background-color: var(--tag-success-fill);
             border-color: var(--tag-success-border);
             color: var(--tag-success-color);
-
-            & .el-tag__close:hover {
-                background-color: var(--tag-success-color);
-                color: var(--white);
-            }
         }
 
         @m primary {
             background-color: rgba(var(--blue), 0.1);
             border-color: rgba(var(--blue), 0.2);
             color: var(--blue);
-
-            & .el-tag__close:hover {
-                background-color: var(--blue);
-                color: var(--white);
-            }
         }
 
         @m warning {
             background-color: var(--tag-warning-fill);
             border-color: var(--tag-warning-border);
             color: var(--tag-warning-color);
-
-            &.el-tag__close:hover {
-                background-color: var(--tag-warning-color);
-                color: var(--white);
-            }
         }
 
         @m danger {
             background-color: var(--tag-danger-fill);
             border-color: var(--tag-danger-border);
             color: var(--tag-danger-color);
-
-            & .el-tag__close:hover {
-                background-color: var(--tag-danger-color);
-                color: var(--white);
-            }
         }
 
         @m close {
             font-size: 12px;
+            cursor: pointer;
+
         }
     }
 }

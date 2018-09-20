@@ -1,5 +1,6 @@
 @import './common/var.css';
 @import './common/transtion.css';
+
 @n lu {
     @b tip {
         display: inline-block;
@@ -16,6 +17,7 @@
             font-size: 12px;
             border-radius: var(--borderRadius);
             z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
 
         @e arrow {

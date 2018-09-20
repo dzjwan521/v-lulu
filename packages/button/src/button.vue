@@ -10,7 +10,8 @@
     ]"
   >
 
-    <i v-if="(icon !== '')||loading" :class="[icon,{'loading':loading}]"></i>
+    <i v-if="(icon !== '')&& !loading" class="fs-14" :class="[icon]"></i>
+    <i v-if="loading" class="fs-14 iconfont" :class="[{'icon-loading-out lu-rotate':loading}]"></i>
     <slot></slot>
   </button>
 </template>

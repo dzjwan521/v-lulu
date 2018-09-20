@@ -1,17 +1,28 @@
 @import "./var.css";
 @import './mixin.css';
+
+.slide-height-enter-active,
+.slide-height-leave-active {
+    @mixin height .2s;
+}
+
+.slide-height-enter,
+.slide-height-leave-to {
+    height: 0px;
+}
+
 .slide-right-enter-active,
-.slide-right-leave-active{
+.slide-right-leave-active {
     @mixin slide .4s;
 }
 
 .slide-right-enter,
 .slide-right-leave-to {
-    transform: translate3D(100%, 0,0);
+    transform: translate3D(100%, 0, 0);
 }
 
 .router-fade-enter-active,
-.router-fade-leave-active{
+.router-fade-leave-active {
     @mixin fade .3s
 }
 
@@ -35,7 +46,6 @@
 .bottom-fade-enter-active,
 .bottom-fade-leave-active {
     @mixin fade 1s
-
 }
 
 .bottom-fade-enter,
@@ -75,6 +85,10 @@
 .lu-zoom-in-center-leave-active {
     opacity: 0;
     transform: scaleX(0);
+}
+
+.lu-rotate {
+    animation: spin 2s linear infinite;
 }
 
 @keyframes lu-spinner {
@@ -154,5 +168,91 @@
     to {
         opacity: 0;
         transform: scaleY(0.8);
+    }
+}
+
+
+@keyframes tinydown {
+
+    0%,
+    5% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes falldown {
+    form {
+        transform: translateY(-5px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes raiseup {
+    from {
+        transform: translateY(5px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+
+@keyframes spin2 {
+    0% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }

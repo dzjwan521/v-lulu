@@ -11,7 +11,7 @@
       <template v-else>
         <vue-datepicker-local-calendar v-model="dates[0]"></vue-datepicker-local-calendar>
       </template>
-      <div v-if="showButtons" class="datepicker__buttons">
+      <div v-if="showButtons" class="lu-datepicker__buttons">
         <button @click.prevent.stop="cancel" class="lu-datepicker__button-cancel">{{this.local.cancelTip}}</button>
         <button @click.prevent.stop="submit" class="lu-datepicker__button-select">{{this.local.submitTip}}</button>
       </div>
@@ -97,10 +97,10 @@
                     return val ? txt : ''
                 }
             },
-            classes(){
+            classes() {
                 const style = []
                 style.push(this.inputClass)
-                this.show && style.push('focus') 
+                this.show && style.push('focus')
                 this.size && style.push(`size_${this.size}`)
             }
         },

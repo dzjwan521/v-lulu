@@ -1,18 +1,31 @@
 <!--  -->
 <template>
     <div class="lu-input">
-        <input :class="classes" :type="type" :size="size" ref="input"
+        <input v-if="type!=='textarea'" :class="classes" :type="type" :size="size" ref="input"
+            v-bind="$attrs"
             @focus="$emit('focus',$event)"
             @blur="$emit('blur',$event)"
             @change="$emit('change',$event)"
             @input="handleInput"
+            :style="styleObject"
             :value="currentValue"
             :disabled="disabled"
             :readonly="readonly"
             :placeholder="placeholder"
             :name="name"
             >
-        <i v-show="clearable" class="lu-icon-closefill lu-input_icon"  @click="clear"></i>
+        <textarea ref="textarea" v-else v-bind="$attrs" class="lu-input_default"
+         @focus="$emit('focus',$event)"
+            @blur="$emit('blur',$event)"
+            @change="$emit('change',$event)"
+            @input="handleInput"
+            :style="styleObject"
+            :value="currentValue"
+            :disabled="disabled"
+            :readonly="readonly"
+            :placeholder="placeholder"
+            :name="name"></textarea>
+        <i v-show="clearable" class="iconfont icon-roundclosefill lu-input_icon"  @click="clear"></i>
         <i v-show="suffix" class="lu-input_icon" :class="[suffix,suffix&&'is-suffix']" @click.stop="$emit('icon-click',$event)"></i>
         <i v-show="prefix" class="lu-input_icon" :class="[prefix,prefix&&'is-prefix']"></i>
 
@@ -25,17 +38,17 @@
         components: {},
         data() {
             return {
-                currentValue: this.value === undefined || this.value === null? '': this.value,
+                currentValue: this.value === undefined || this.value === null ? '' : this.value,
             };
         },
         props: {
-            value: [String,Number],
+            value: [String, Number],
+            styleObject: [String, Object, Array],
             type: {
                 type: String,
                 default: 'text'
             },
             size: [String],
-            icon: [String],
             prefix: [String],
             suffix: [String],
             name: [String],
@@ -53,7 +66,7 @@
             },
             placeholder: [String],
         },
-        watch:{
+        watch: {
             value(val, oldValue) {
                 this.setCurrentValue(val);
             }
@@ -74,7 +87,7 @@
             setCurrentValue(value) {
                 this.currentValue = value;
             },
-             focus() {
+            focus() {
                 this.$refs.input.focus();
             },
             blur() {
@@ -85,13 +98,13 @@
                 this.setCurrentValue(value);
                 this.$emit('input', value);
             },
-           clear(event){
-               this.$emit('input', '');
+            clear(event) {
+                this.$emit('input', '');
                 this.$emit('change', '');
                 this.$emit('clear');
                 this.setCurrentValue(' ');
                 this.focus();
-           }
+            }
         },
         mounted() { },
         created() { },

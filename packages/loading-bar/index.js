@@ -1,6 +1,5 @@
 import LoadingBar from './src/loadingBar.vue'
 import Vue from 'vue'
-
 const LoadingBarConstructor = Vue.extend(LoadingBar)
 let timer = null,
     removeTimer = null
@@ -47,5 +46,6 @@ LoadingBarConstructor.prototype.error = function () {
     this.totalProgress = 100
     this.isError = true
 }
+
 
 export default new LoadingBarConstructor()

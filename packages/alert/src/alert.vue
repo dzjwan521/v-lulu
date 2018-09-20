@@ -1,5 +1,5 @@
 <template>
-  <transition name="fade">
+  <transition name="top-fade">
     <div class="lu-alert"
          :class="[ typeClass, {'is-center': center} ]"
          v-show="visible">
@@ -14,7 +14,7 @@
            v-if="description">{{description}}</p>
         <i v-if="closable"
            class="lu-alert_closebtn"
-           :class="[ closeText ? 'is-customed' : 'lu-icon-close2']"
+           :class="[ closeText ? 'is-customed' : 'iconfont icon-close']"
            @click="close">{{closeText}}</i>
       </div>
     </div>
@@ -78,9 +78,7 @@
                 return `lu-alert_${this.type}`;
             },
             iconClass() {
-                //暂无对应图标
-                // return `lu-icon--${this.type}`
-                return "lu-icon-favfill";
+                return `iconfont lu-alert_icon_${this.type}`
             },
             isBoldTitle() {
                 return this.description ? "is-bold" : "";

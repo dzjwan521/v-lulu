@@ -5,8 +5,6 @@
         padding: 8px 16px;
         border-radius: var(--borderRadius);
         position: relative;
-        transition: opacity 0.2s;
-        opacity: 1;
         display: flex;
         align-items: center;
 
@@ -19,11 +17,11 @@
         }
 
         @m warning {
-            color: var(--backgroundOrange) color(var(--backgroundOrange) a(0.1));
+            color: var(--yellow) color(var(--yellow) a(0.1));
         }
 
         @m info {
-            color: var(--yellow) color(var(--yellow) a(0.1));
+            color: var(--blue) color(var(--blue) a(0.1));
         }
 
         @m error {
@@ -37,6 +35,46 @@
             @when big {
                 font-size: 28px;
                 width: 28px;
+            }
+
+            @m info {
+                color: var(--blue);
+
+                &::before {
+                    content: "\e6e4";
+                }
+            }
+
+            @m success {
+                color: var(--green);
+
+                &::before {
+                    content: "\e656";
+                }
+            }
+
+            @m warning {
+                color: var(--orange);
+
+                &::before {
+                    content: "\e662";
+                }
+            }
+
+            @m question {
+                color: var(--yellow);
+
+                &::before {
+                    content: "\e690";
+                }
+            }
+
+            @m error {
+                color: var(--red);
+
+                &::before {
+                    content: "\e658";
+                }
             }
         }
 

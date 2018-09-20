@@ -31,7 +31,7 @@
     /* // 出错使用 */
     --light: #f7f9fa;
     /* // 很轻的灰色，常做背景色使用 */
-    --yellow: #50bfff;
+    --yellow: #f3d05c;
     /* 黄色，信息背景色 */
 
     /* // 边框控制 */
@@ -69,15 +69,15 @@
 
 
 
-  --tag-success-fill: rgba(18,206,102,0.10);
-  --tag-success-border: rgba(18,206,102,0.20);
-  --tag-success-color: var(--green);
+    --tag-success-fill: rgba(18, 206, 102, 0.10);
+    --tag-success-border: rgba(18, 206, 102, 0.20);
+    --tag-success-color: var(--green);
 
-  --tag-warning-fill: rgba(247,186,41,0.10);
-  --tag-warning-border: rgba(247,186,41,0.20);
-  --tag-warning-color: var(--orange);
+    --tag-warning-fill: rgba(247, 186, 41, 0.10);
+    --tag-warning-border: rgba(247, 186, 41, 0.20);
+    --tag-warning-color: var(--orange);
 
-  --tag-danger-fill: rgba(255,73,73,0.10);
-  --tag-danger-border: rgba(255,73,73,0.20);
-  --tag-danger-color: var(--red);
+    --tag-danger-fill: rgba(255, 73, 73, 0.10);
+    --tag-danger-border: rgba(255, 73, 73, 0.20);
+    --tag-danger-color: var(--red);
 }
