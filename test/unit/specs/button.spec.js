@@ -5,7 +5,6 @@ describe('Button', () => {
     it('should render correct contents', () => {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor().$mount()
-        expect(vm.type)
-            .to.be.equal('default')
+        expect(vm.type).to.be.equal('default')
     })
 })
