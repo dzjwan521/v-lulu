@@ -1,15 +1,20 @@
 {
-    "name": "vue-lulu",
-    "version": "0.0.1",
-    "description": "A Vue.js project",
+    "name": "v-lulu",
+    "version": "1.0.0",
+    "description": "一个基于vue的ui组件库",
     "author": "414603173@qq.com",
     "private": true,
+    "main": "packages/index.js",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:dzjwan521/v-lulu.git"
+    },
     "scripts": {
         "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
         "start": "npm run dev",
         "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
         "build": "node build/build.js",
-        "publish": "node build/publish.js"
+        "deploy": "node build/publish.js"
     },
     "dependencies": {
         "cheerio": "^1.0.0-rc.2",

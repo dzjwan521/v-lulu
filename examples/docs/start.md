@@ -16,7 +16,7 @@
 推荐使用 npm 的方式进行开发，享受 node 生态圈和 webpack 工具链带来的便利。通过 npm 安装的模块包，我们可以轻松的使用 import 或者 require 的方式引用
 
 ```bash
-npm install vue-lulu //目前没发布
+npm install v-lulu //目前没发布
 ```
 
 
@@ -26,8 +26,8 @@ npm install vue-lulu //目前没发布
 可以在项目的入口文件中引入所有组件或所需组件
 
 ```js
-import lulu from 'lulu' // 引入组件库
-import '../node_modules/lulu/packages/theme-default/lib/index.css' // 引入样式库
+import lulu from 'v-lulu' // 引入组件库
+import 'v-lulu/theme/lib/index.css' // 引入样式库
 
 Vue.use(lulu)
 ```
@@ -37,7 +37,7 @@ Vue.use(lulu)
 可以局部注册所需的组件，适用于与其他框架组合使用的场景
 
 ```js
-import { luButton } from 'vue-lulu'
+import { luButton } from 'v-lulu'
 
 export default {
   components: {
