@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "description": "一个基于vue的ui组件库",
     "author": "414603173@qq.com",
-    "private": true,
     "main": "packages/index.js",
     "repository": {
         "type": "git",
