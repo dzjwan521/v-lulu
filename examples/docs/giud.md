@@ -18,12 +18,3 @@
 - [NW.js](http://nwjs.io)
 
 
-## 贡献
-
-如果你在使用 `lulu-ui` 时遇到问题，或者有好的建议，欢迎给我提 [Issue](https://github.com/dzjwan521/v-lulu/issues) 或 [Pull Request](https://github.com/dzjwan521/v-lulu/pulls)
-
-
-
-
-
-
