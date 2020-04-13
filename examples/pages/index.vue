@@ -126,7 +126,7 @@
       top: -80px;
       width: 100%;
       height: 200px;
-      box-shadow: 0 -4px 30px 0 #dfe1e6;
+      // box-shadow: 0 -4px 30px 0 #dfe1e6;
       background: rgb(80, 99, 117);
       transform: skewY(-4deg);
     }

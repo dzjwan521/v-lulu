@@ -1,8 +1,9 @@
+
 # 介绍
 
 ----
 
-`lulu-UI` 是一款基于 `Vue.js v2.5.2` 的前端 UI 组件库，个人业余时间做的，参考了[lulu](https://github.com/VV-UI/VV-UI/pulls)
+`lulu-UI` 是一款基于 `Vue.js v2.5.2` 的前端 UI 组件库，个人业余时间做的，样式模仿了[lulu](https://l-ui.com/)，构建方式以及组件的封装学习了多个库iview，antd，element-ui，vv-ui等
 
 
 ## 特性
